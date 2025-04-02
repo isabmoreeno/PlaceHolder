@@ -1,0 +1,21 @@
+<div class="container mt-5 p-4 bg-white shadow-lg rounded">
+    <h2 class="text-center text-black mb-4">LISTA DE POSTS</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered border-primary table-sm table-hover">
+            <thead class="bg-dark text-white text-center">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Conteúdo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let l of list" class="align-middle text-center">
+                    <td class="fw-bold">{{ l.id }}</td>
+                    <td class="text-start">{{ l.title | slice:0:30 }}{{ l.title.length > 30 ? '...' : '' }}</td>
+                    <td class="text-start">{{ l.body | slice:0:30 }}{{ l.body.length > 30 ? '...' : '' }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
